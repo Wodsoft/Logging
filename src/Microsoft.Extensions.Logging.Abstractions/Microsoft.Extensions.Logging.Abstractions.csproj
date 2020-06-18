@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>Logging abstractions for Microsoft.Extensions.Logging.
+Commonly used types:
+Microsoft.Extensions.Logging.ILogger
+Microsoft.Extensions.Logging.ILoggerFactory
+Microsoft.Extensions.Logging.ILogger&lt;TCategoryName&gt;
+Microsoft.Extensions.Logging.LogLevel
+Microsoft.Extensions.Logging. 
+Microsoft.Extensions.Logging.</Description>
+    <VersionPrefix>1.1.2</VersionPrefix>
+    <TargetFramework>netstandard1.1</TargetFramework>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <AssemblyName>Microsoft.Extensions.Logging.Abstractions</AssemblyName>
+    <AssemblyOriginatorKeyFile>../../tools/Key.snk</AssemblyOriginatorKeyFile>
+    <SignAssembly>true</SignAssembly>
+    <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
+    <PackageId>Microsoft.Extensions.Logging.Abstractions</PackageId>
+    <PackageTags>logging</PackageTags>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>git://github.com/aspnet/logging</RepositoryUrl>
+    <NetStandardImplicitPackageVersion>1.6.1</NetStandardImplicitPackageVersion>
+    <GenerateNeutralResourcesLanguageAttribute>false</GenerateNeutralResourcesLanguageAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyCopyrightAttribute>false</GenerateAssemblyCopyrightAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+  </PropertyGroup>
+
+</Project>
