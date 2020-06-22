@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <Description>Logging abstractions for Microsoft.Extensions.Logging.
@@ -10,7 +10,7 @@ Microsoft.Extensions.Logging.LogLevel
 Microsoft.Extensions.Logging. 
 Microsoft.Extensions.Logging.</Description>
     <VersionPrefix>1.1.2</VersionPrefix>
-    <TargetFramework>netstandard1.1</TargetFramework>
+    <TargetFrameworks>net40;net45</TargetFrameworks>
     <NoWarn>$(NoWarn);CS1591</NoWarn>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -18,15 +18,18 @@ Microsoft.Extensions.Logging.</Description>
     <AssemblyOriginatorKeyFile>../../tools/Key.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>true</SignAssembly>
     <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
-    <PackageId>Microsoft.Extensions.Logging.Abstractions</PackageId>
+    <PackageId>Wodsoft.Extensions.Logging.Abstractions</PackageId>
     <PackageTags>logging</PackageTags>
     <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>git://github.com/aspnet/logging</RepositoryUrl>
-    <NetStandardImplicitPackageVersion>1.6.1</NetStandardImplicitPackageVersion>
+    <RepositoryUrl>https://github.com/wodsoft/logging</RepositoryUrl>
     <GenerateNeutralResourcesLanguageAttribute>false</GenerateNeutralResourcesLanguageAttribute>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyCopyrightAttribute>false</GenerateAssemblyCopyrightAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
   </PropertyGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)'=='net40'">
+    <PackageReference Include="Wodsoft.DotNet40.Runtime" Version="1.0.2" />
+  </ItemGroup>
 
 </Project>

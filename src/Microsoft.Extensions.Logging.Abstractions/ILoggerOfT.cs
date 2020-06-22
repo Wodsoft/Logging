@@ -2,6 +2,7 @@
 // Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
 using System;
+using System.Collections.ObjectModel;
 
 namespace Microsoft.Extensions.Logging
 {
@@ -13,6 +14,6 @@ namespace Microsoft.Extensions.Logging
     /// <typeparam name="TCategoryName">The type who's name is used for the logger category name.</typeparam>
     public interface ILogger<out TCategoryName> : ILogger
     {
-        
+
     }
 }

@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Description>Helpers for writing tests that use Microsoft.Extensions.Logging. Contains null implementations of the abstractions that do nothing, as well as test implementations that are observable.</Description>
     <VersionPrefix>1.1.2</VersionPrefix>
-    <TargetFramework>netstandard1.1</TargetFramework>
+    <TargetFramework>net461</TargetFramework>
     <NoWarn>$(NoWarn);CS1591</NoWarn>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -11,11 +11,10 @@
     <AssemblyOriginatorKeyFile>../../tools/Key.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>true</SignAssembly>
     <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
-    <PackageId>Microsoft.Extensions.Logging.Testing</PackageId>
+    <PackageId>Wodsoft.Extensions.Logging.Testing</PackageId>
     <PackageTags>logging;testing</PackageTags>
     <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>git://github.com/aspnet/logging</RepositoryUrl>
-    <NetStandardImplicitPackageVersion>1.6.1</NetStandardImplicitPackageVersion>
+    <RepositoryUrl>http://github.com/wodsoft/logging</RepositoryUrl>
     <PackageTargetFallback>$(PackageTargetFallback);dotnet</PackageTargetFallback>
     <GenerateNeutralResourcesLanguageAttribute>false</GenerateNeutralResourcesLanguageAttribute>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
@@ -28,7 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="xunit.assert" Version="2.2.0-*" />
+    <PackageReference Include="xunit.assert" Version="2.2.0" />
   </ItemGroup>
 
 </Project>

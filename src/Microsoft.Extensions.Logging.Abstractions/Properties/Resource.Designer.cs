@@ -8,7 +8,7 @@ namespace Microsoft.Extensions.Logging.Abstractions
     internal static class Resource
     {
         private static readonly ResourceManager _resourceManager
-            = new ResourceManager("Microsoft.Extensions.Logging.Abstractions.Resource", typeof(Resource).GetTypeInfo().Assembly);
+            = new ResourceManager("Microsoft.Extensions.Logging.Abstractions.Resource", typeof(Resource).Assembly);
 
         /// <summary>
         /// The format string '{0}' does not have the expected number of named parameters. Expected {1} parameter(s) but found {2} parameter(s).

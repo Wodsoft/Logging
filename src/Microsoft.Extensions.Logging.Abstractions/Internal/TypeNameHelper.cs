@@ -30,7 +30,7 @@ namespace Microsoft.Extensions.Logging.Abstractions.Internal
 
         public static string GetTypeDisplayName(Type type)
         {
-            if (type.GetTypeInfo().IsGenericType)
+            if (type.IsGenericType)
             {
                 var fullName = type.GetGenericTypeDefinition().FullName;
 

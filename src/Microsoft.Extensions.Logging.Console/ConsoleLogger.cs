@@ -44,14 +44,14 @@ namespace Microsoft.Extensions.Logging.Console
             Filter = filter ?? ((category, logLevel) => true);
             IncludeScopes = includeScopes;
 
-            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
-            {
-                Console = new WindowsLogConsole();
-            }
-            else
-            {
-                Console = new AnsiLogConsole(new AnsiSystemConsole());
-            }
+            //if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+            //{
+            Console = new WindowsLogConsole();
+            //}
+            //else
+            //{
+            //    Console = new AnsiLogConsole(new AnsiSystemConsole());
+            //}
         }
 
         public IConsole Console
