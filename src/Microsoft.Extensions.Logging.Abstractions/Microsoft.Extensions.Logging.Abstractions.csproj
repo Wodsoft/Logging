@@ -22,6 +22,8 @@ Microsoft.Extensions.Logging.</Description>
     <PackageTags>logging</PackageTags>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/wodsoft/logging</RepositoryUrl>
+    <IncludeSymbols>true</IncludeSymbols>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <GenerateNeutralResourcesLanguageAttribute>false</GenerateNeutralResourcesLanguageAttribute>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyCopyrightAttribute>false</GenerateAssemblyCopyrightAttribute>
@@ -30,6 +32,13 @@ Microsoft.Extensions.Logging.</Description>
 
   <ItemGroup Condition="'$(TargetFramework)'=='net40'">
     <PackageReference Include="Wodsoft.DotNet40.Runtime" Version="1.0.2" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
 </Project>
