@@ -8,7 +8,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Console;
-using Microsoft.Extensions.PlatformAbstractions;
 using Microsoft.Extensions.Primitives;
 using ILogger = Microsoft.Extensions.Logging.ILogger;
 
@@ -34,9 +33,7 @@ namespace SampleApp
             _logger = factory.CreateLogger<Program>();
 
             // providers may be added to an ILoggerFactory at any time, existing ILoggers are updated
-#if !NETCOREAPP1_1
             factory.AddEventLog();
-#endif
 
             // How to configure the console logger to reload based on a configuration file.
             //
@@ -69,7 +66,7 @@ namespace SampleApp
 
         private class RandomReloadingConsoleSettings : IConsoleLoggerSettings
         {
-            private PhysicalFileProvider _files = new PhysicalFileProvider(PlatformServices.Default.Application.ApplicationBasePath);
+            private Microsoft.Extensions.FileProviders.PhysicalFileProvider _files = new Microsoft.Extensions.FileProviders.PhysicalFileProvider(AppDomain.CurrentDomain.BaseDirectory);
 
             public RandomReloadingConsoleSettings()
             {
